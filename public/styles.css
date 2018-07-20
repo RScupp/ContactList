@@ -5,3 +5,11 @@
   margin-bottom: 40px;
   border-bottom: 1px solid black;
 }
+.submit {
+  color: white;
+  background: #72e272;
+  font-weight: 700;
+}
+.names {
+    font-size=1.75em;
+}

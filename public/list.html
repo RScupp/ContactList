@@ -2,8 +2,8 @@
   <div class="col-md-10">
     <h1 class="title">Contacts</h1>
   </div>
-  <div class="col-md-2">
-    <a style="margin-top:20px;" class="submit" href="#/new/contact">Add Contact</a>
+  <div class="col-md-2 addContact">
+    <a class="submit" href="#/new/contact">Add Contact</a>
   </div>
 </div>
 <div class="container">
@@ -12,6 +12,7 @@
       <tr ng-repeat="contact in contacts | orderBy:'lastName'" style="cursor:pointer">
         <td>
           <a ng-href="#/contact/{{contact._id}}">{{ contact.firstName }} {{ contact.lastName }}</a>
+          <button class="btn btn-default fa fa-plus" aria-hidden="true" ng-click="back()"></button>
         </td>
       </tr>
     </tbody>

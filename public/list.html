@@ -12,8 +12,13 @@
       <tr ng-repeat="contact in contacts | orderBy:'lastName'" style="cursor:pointer">
         <td>
           <a ng-href="#/contact/{{contact._id}}">{{ contact.firstName }} {{ contact.lastName }}</a>
-          <button class="btn btn-default fa fa-plus" style="text-align: right;" aria-hidden="true" ng-click="showDetails(contact)"></button>
-          <div ng-hide="contact.showDet"><p>Test</p></div>
+          <button class="btn btn-default fa fa-plus" style="float: right;" aria-hidden="true" ng-click="showDetails(contact)"></button>
+          <div ng-hide="contact.showDet">
+            <p ng-if="contact.company">Company: {{ contact.company }}</p>
+            <p ng-if="contact.email">Email: <a ng-href="mailto:{{ contact.email }}" target="_blank">{{ contact.email }}</a></p>
+            <p ng-if="contact.phone.mobile">Mobile Phone: {{ contact.phone.mobile }} </p>
+            <p ng-if="contact.phone.work">Work Phone: {{ contact.phone.work }} </p>
+          </div>
         </td>
       </tr>
     </tbody>

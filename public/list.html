@@ -3,15 +3,15 @@
     <h1 class="title">Contacts</h1>
   </div>
   <div class="col-md-2">
-    <button style="margin-top:20px" ng-href="/new/contact" class="submit">Add Contact</button>
+    <a style="margin-top:20px" class="submit" href="#/new/contact">Add Contact</a>
   </div>
-
+</div>
 <div class="container">
   <table class="table table-hover">
     <tbody>
       <tr ng-repeat="contact in contacts | orderBy:'lastName'" style="cursor:pointer">
         <td>
-          <a class="names" ng-href="#/contact/{{contact._id}}">{{ contact.firstName }} {{ contact.lastName }}</a>
+          <a ng-href="#/contact/{{contact._id}}">{{ contact.firstName }} {{ contact.lastName }}</a>
         </td>
       </tr>
     </tbody>

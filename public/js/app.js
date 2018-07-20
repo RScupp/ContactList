@@ -117,10 +117,12 @@ angular.module("contactsApp", ['ngRoute'])
             Contacts.deleteContact(contactId);
         }
     });
-$scope.go = function (path) {
-  $location.path(path);
-    console.log(path);
-};
+app.controller('SlideController', ['$scope', '$location',function($scope, $location){ 
+$scope.goNext = function (hash) { 
+$location.path(hash);
+ }
+
+;]);
 function checkForm() {
     //Get all the inputs within the submitted form
     var inputs = document.getElementsByTagName("input");

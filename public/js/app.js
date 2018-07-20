@@ -32,6 +32,7 @@ angular.module("contactsApp", ['ngRoute'])
                 });
         }
         this.createContact = function(contact) {
+            contact.showDet = 0;
             return $http.post("/contacts", contact).
                 then(function(response) {
                     return response;

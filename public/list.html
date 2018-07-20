@@ -13,7 +13,7 @@
         <td>
           <a ng-href="#/contact/{{contact._id}}">{{ contact.firstName }} {{ contact.lastName }}</a>
           <button class="btn btn-default fa fa-plus" style="text-align: right;" aria-hidden="true" ng-click="showDetails(contact)"></button>
-          <p ng-hide="contact.showDet">Test</p>
+          <div ng-hide="contact.showDet"><p>Test</p></div>
         </td>
       </tr>
     </tbody>

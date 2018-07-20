@@ -72,9 +72,8 @@ angular.module("contactsApp", ['ngRoute'])
     })
     .controller("ListController", function(contacts, $scope) {
         $scope.contacts = contacts.data;
-        scope.contact.showDet = false;
         $scope.showDetails = function(contact) {
-            $scope.contact.showDet = $scope.contact.showDet;
+            $scope.contact.showDet = 1;
             console.log($scope.contact.showDet)
         }
     })

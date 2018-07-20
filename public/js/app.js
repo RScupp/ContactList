@@ -117,6 +117,9 @@ angular.module("contactsApp", ['ngRoute'])
             Contacts.deleteContact(contactId);
         }
     });
+$scope.go = function ( path ) {
+  $location.path( path );
+};
 function checkForm() {
     //Get all the inputs within the submitted form
     var inputs = document.getElementsByTagName("input");

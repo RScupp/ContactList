@@ -16,6 +16,7 @@
   border: none;
   box-shadow: none;
   margin-top: 20px;
+  float: right;
 }
 .addContact {
     margin-top: 25px;

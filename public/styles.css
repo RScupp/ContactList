@@ -7,7 +7,7 @@
 }
 .submit {
   color: white;
-  background: #72e272;
+  background-color: #72e272;
   font-weight: 700;
   padding: 15px 20px;
   background: none;
@@ -16,6 +16,9 @@
   border-radius: 5px;
   border: none;
   box-shadow: none;
+  padding: 10px 15px;
+  margin-right: 15px;
+  margin-top: 20px;
 }
 submit:hover {
   cursor: pointer;
@@ -28,10 +31,10 @@ submit:hover {
   transition-duration: .3s;
 }
 .buttons .submit {
-  margin-right: 15px;
+  
 }
 
 .buttons .submit,
 .buttons .default {
-  padding: 10px 15px;
+  
 }

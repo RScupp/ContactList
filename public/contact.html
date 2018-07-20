@@ -19,7 +19,7 @@
     <p ng-if="contact.phone.mobile">Mobile Phone: {{ contact.phone.mobile }} </p>
     <p ng-if="contact.phone.work">Work Phone: {{ contact.phone.work }} </p>
     <p ng-if="contact.address">Address: {{ contact.address }} </p>
-    <p ng-if="contact.linkedIn">Linked In: <a ng-href="{{ contact.linkedIn }}" target="_blank">{{ contact.linkedIn }}</a></p>
+    <p ng-if="contact.linkedIn"><a ng-href="{{ contact.linkedIn }}" target="_blank">Linked In</a></p>
     <p>
       <button style="margin-top:20px" class="btn btn-default" ng-click="toggleEdit()">Edit</button>
       <a style="margin-top:20px" class="btn btn-default" href="#/">Back</a>

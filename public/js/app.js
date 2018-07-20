@@ -117,18 +117,7 @@ angular.module("contactsApp", ['ngRoute'])
             Contacts.deleteContact(contactId);
         }
     });
-app.directive('suchHref', ['$location', function ($location) {
-  return{
-    restrict: 'A',
-    link: function (scope, element, attr) {
-      element.attr('style', 'cursor:pointer');
-      element.on('click', function(){
-        $location.url(attr.suchHref)
-        scope.$apply();
-      });
-    }
-  }
-}]);
+
 function checkForm() {
     //Get all the inputs within the submitted form
     var inputs = document.getElementsByTagName("input");

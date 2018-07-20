@@ -105,7 +105,7 @@ angular.module("contactsApp", ['ngRoute'])
         }
 
         $scope.saveContact = function(contact) {
-            if(checkform(contact))
+            if(checkFormorm())
                 {
                     Contacts.editContact(contact);
                     $scope.editMode = false;
@@ -117,14 +117,14 @@ angular.module("contactsApp", ['ngRoute'])
             Contacts.deleteContact(contactId);
         }
     });
-function checkform(form) {
-    // get all the inputs within the submitted form
+function checkForm() {
+    //Get all the inputs within the submitted form
     var inputs = document.getElementsByTagName("input");
     for (var i = 0; i < inputs.length; i++) {
-        // only validate the inputs that have the required attribute
+        //Only validate the inputs that have the required attribute
         if(inputs[i].hasAttribute("required")){
             if(inputs[i].value == ""){
-                // found an empty field that is required
+                //Found an empty field that is required
                 alert("Please fill all required fields");
                 return false;
             }

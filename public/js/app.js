@@ -105,7 +105,7 @@ angular.module("contactsApp", ['ngRoute'])
         }
 
         $scope.saveContact = function(contact) {
-            if(checkFormorm())
+            if(checkForm())
                 {
                     Contacts.editContact(contact);
                     $scope.editMode = false;

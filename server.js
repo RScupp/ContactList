@@ -76,18 +76,7 @@ app.post("/contacts", function(req, res) {
  *    PUT: update contact by id
  *    DELETE: deletes contact by id
  */
-app.directive('suchHref', ['$location', function ($location) {
-  return{
-    restrict: 'A',
-    link: function (scope, element, attr) {
-      element.attr('style', 'cursor:pointer');
-      element.on('click', function(){
-        $location.url(attr.suchHref)
-        scope.$apply();
-      });
-    }
-  }
-}]);
+
 app.get("/contacts/:id", function(req, res) {
   db.collection(CONTACTS_COLLECTION).findOne({ _id: new ObjectID(req.params.id) }, function(err, doc) {
     if (err) {
